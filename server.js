@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const { response, request } = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-let PORT;
+let PORT = process.env.PORT || 80
 const uri = process.env.MONGODB_URI;
 
 const dotenv = require('dotenv')
@@ -102,6 +102,6 @@ app.delete('/deleteItem', (req, res) => {
 })
 
 // Create a server for browser to connect to using Express's listen method
-app.listen(process.env.PORT || 80, () => {
+app.listen(PORT, () => {
     console.log(`Server in ${process.env.STATUS} mode, listening on *:${PORT}`)
 })
