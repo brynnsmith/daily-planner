@@ -4,12 +4,7 @@ const bodyParser = require('body-parser');
 const { response, request } = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-let PORT;
-// Not currently working -- have to bug fix to switch port
-    if (process.env.STATUS === 'production') {
-        PORT = process.env.PROD_PORT
-    }
-    PORT = process.env.DEV_PORT;
+let PORT = 80;
 
 const dotenv = require('dotenv')
 dotenv.config()
