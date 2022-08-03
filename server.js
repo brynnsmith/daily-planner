@@ -1,6 +1,6 @@
 // Use express by requiring it
 const express = require('express');
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 // const { response, request } = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
