@@ -106,6 +106,6 @@ app.delete('/deleteItem', (req, res) => {
 })
 
 // Create a server for browser to connect to using Express's listen method
-app.listen(process.env.PROD_PORT || PORT, () => {
-    console.log(`Server in ${process.env.STATUS} mode, listening on *:${process.env.PROD_PORT}`)
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server in ${process.env.STATUS} mode, listening on *:${PORT}`)
 })
