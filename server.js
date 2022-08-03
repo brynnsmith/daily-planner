@@ -4,7 +4,7 @@ const express = require('express');
 // const { response, request } = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-let PORT = process.env.PORT || 80
+let PORT = process.env.PORT || 443
 const uri = process.env.MONGODB_URI;
 
 //const dotenv = require('dotenv')
