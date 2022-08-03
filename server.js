@@ -1,14 +1,13 @@
 // Use express by requiring it
 const express = require('express');
 const bodyParser = require('body-parser');
-// const { response, request } = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 let PORT = process.env.PORT || 443
 const uri = process.env.MONGODB_URI;
 
-//const dotenv = require('dotenv')
-//dotenv.config()
+const dotenv = require('dotenv')
+dotenv.config()
 
 let db;
 let dbConnectionString = process.env.DB_STRING;
