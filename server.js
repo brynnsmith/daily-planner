@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-let PORT = process.env.PORT || 443
+let PORT = 443
 const uri = process.env.MONGODB_URI;
 
 const dotenv = require('dotenv')
@@ -63,7 +63,7 @@ app.put('/markComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json('Marked Complete')
+        result.json()
         res.redirect('/')
     })
     .catch(error => console.error(error))
@@ -81,7 +81,7 @@ app.put('/markUnComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json('Marked Complete')
+        result.json()
         res.redirect('/')
     })
     .catch(error => console.error(error))
@@ -93,7 +93,7 @@ app.delete('/deleteItem', (req, res) => {
     db.collection('todoList').deleteOne({ thing: req.body.itemFromJS })
     .then(result => {
         console.log('Todo Deleted')
-        result.json('Todo Deleted')
+        result.json()
         res.redirect('/')
     })
     .catch(error => console.error(error))
@@ -101,6 +101,6 @@ app.delete('/deleteItem', (req, res) => {
 })
 
 // Create a server for browser to connect to using Express's listen method
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server in ${process.env.STATUS} mode, listening on *:${PORT}`)
 })
