@@ -63,8 +63,7 @@ app.put('/markComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json()
-        res.redirect('/')
+        result.json('Marked Complete')
     })
     .catch(error => console.error(error))
 })
@@ -81,8 +80,7 @@ app.put('/markUnComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json()
-        res.redirect('/')
+        result.json('Marked Complete')
     })
     .catch(error => console.error(error))
 
@@ -93,8 +91,7 @@ app.delete('/deleteItem', (req, res) => {
     db.collection('todoList').deleteOne({ thing: req.body.itemFromJS })
     .then(result => {
         console.log('Todo Deleted')
-        result.json()
-        res.redirect('/')
+        result.json('Todo Deleted')
     })
     .catch(error => console.error(error))
 

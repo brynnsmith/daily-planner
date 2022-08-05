@@ -7,23 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>To Do List:</h1>
-    <ul class="todoItems">
-    <% for (let i = 0; i < items.length; i++) {%>
-        <li class= "item">
-            <% if(items[i].completed === true) {%>
-                <span class='completed'><%= items[i].thing %></span>
-                <i class= "fa fa-solid fa-check"></i>
-            <% }else{ %>
-                <span><%= items[i].thing %></span>
-            <% } %>  
-            <i class='fa fa-trash'></i>
-        </li>
-    <% } %>
-    </ul>
+    <section class= "mainList">
+        <h1>To Do List:</h1>
+        <ul class="todoItems">
+            <% for (let i = 0; i < items.length; i++) {%>
+                <li class= "item">
+                    <% if(items[i].completed === true) {%>
+                        <span class='completed'><%= items[i].thing %></span>
+                        <i class= "fa fa-solid fa-check"></i>
+                    <% }else{ %>
+                        <span><%= items[i].thing %></span>
+                    <% } %>  
+                    <i class='fa fa-trash'></i>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+    
 
     <h2>Left to do: <%= left %></h2>
     
