@@ -30,15 +30,16 @@
         </ul>
     </section>
     
-
-    <h2>Left to do: <%= left %></h2>
+    <section class="formArea">
+        <h2>Left to do: <%= left %></h2>
     
-    <h2>Add an Item to Your To Do List</h2>
+        <h2>Add an Item to Your To Do List</h2>
 
-    <form action="/addTodo" method="POST">
-        <input type="text" placeholder="Thing to Do" name="todoItem">
-        <input type="submit">
-    </form>
+        <form action="/addTodo" method="POST">
+            <input type="text" placeholder="Thing to Do" name="todoItem">
+            <input type="submit">
+        </form>
+    </section>
     <script src= "/main.js"></script>
 </body>
 </html>

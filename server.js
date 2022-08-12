@@ -63,7 +63,7 @@ app.put('/markComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json('Marked Complete')
+        res.json('Marked Complete')
     })
     .catch(error => console.error(error))
 })
@@ -80,7 +80,7 @@ app.put('/markUnComplete', (req, res) => {
     })
     .then(result => {
         console.log('Marked Complete')
-        result.json('Marked Complete')
+        res.json('Marked Complete')
     })
     .catch(error => console.error(error))
 
@@ -91,7 +91,7 @@ app.delete('/deleteItem', (req, res) => {
     db.collection('todoList').deleteOne({ thing: req.body.itemFromJS })
     .then(result => {
         console.log('Todo Deleted')
-        result.json('Todo Deleted')
+        res.json('Todo Deleted')
     })
     .catch(error => console.error(error))
 

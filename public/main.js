@@ -43,7 +43,7 @@ async function markComplete(){
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                'itemFromJS': itemText,
+                'itemFromJS': itemText
             })
           })
         const data = await response.json()

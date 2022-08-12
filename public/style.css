@@ -11,10 +11,20 @@ li {
 .mainList {
     border-radius: 30px;
     box-shadow: 0px 0px 8px #000000;
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-flow: column;
     padding: 50px;
+    margin: 0 auto;
+}
+
+.formArea {
+    text-align: center;
+    padding-top: 20px;
+}
+
+input {
+    font-size: 1.2rem;
 }
 
 .fa {
@@ -23,4 +33,9 @@ li {
 
 .fa-check {
     color: rgb(44, 150, 236);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
 }
